@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply m-0 p-0 no-underline box-border font-kanit;
+}
+
+main {
+    @apply h-screen w-full flex-col items-center justify-center border;
+}
+
+.text__quote__heading {
+    @apply h-[20%] flex gap-1 flex-col justify-center items-center;
+}
+
+.text__quote__heading h1 {
+    @apply font-bold text-3xl tracking-wider;
+}
+
+.text__quote__heading p {
+    @apply text-[1.1rem] text-center;
+}
+
+.daily__quote__wrapper {
+    @apply h-[60%] flex justify-center items-center;
+}
+
+.daily__quote__wrapper_content {
+    @apply border-2 flex flex-col gap-3 w-[40%] py-4 rounded-2xl items-center text-center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.200);
+}
+
+.daily__quotes__content {
+    @apply h-[50%] flex flex-col justify-center px-3 gap-2;
+}
+
+.daily__quotes__content p:nth-child(2) {
+    @apply font-bold tracking-wider;
+}
+
+.button__other__quote {
+    @apply h-[25%];
+}
+
+.button__other__quote button {
+    @apply h-10 px-6 font-semibold rounded-md border bg-slate-950 text-white hover:bg-slate-800 transition-colors duration-300 ease-in-out;
+}
+
+.daily__quote__footer {
+    @apply h-[20%] flex justify-center items-center;
+}
+
+.daily__quote__footer p {
+    @apply text-[0.9rem];
+}
+
+@media (max-width: 500px) {
+    .daily__quote__wrapper_content {
+        @apply w-[90%];
+    }
+
+    .daily__quote__footer {
+        @apply h-[20%] flex justify-center items-end;
+    }
+
+    .daily__quote__footer p {
+        @apply mb-6;
+    }
+}
